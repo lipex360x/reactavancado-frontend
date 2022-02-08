@@ -6,18 +6,19 @@ import * as S from './styles'
 
 import { gaEvent } from 'utils/ga'
 import Container from 'components/Container'
+import { SectionHeaderProps } from 'types/api'
 
 const onClick = () =>
   gaEvent({ action: 'click', category: 'cta', label: 'hero button' })
 
-const SectionHero = () => (
+const SectionHero = ({ logo, sectionHero }: SectionHeaderProps) => (
   <S.Wrapper>
     <Container>
-      <Logo />
+      <Logo {...logo} />
 
       <S.Content>
         <S.TextBlock>
-          <S.Title>React Avançado</S.Title>
+          <S.Title>{sectionHero.title}</S.Title>
           <S.Description>
             Crie aplicações reais com NextJS, Strapi, GraphQL e mais!
           </S.Description>
