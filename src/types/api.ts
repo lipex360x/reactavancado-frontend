@@ -26,7 +26,16 @@ export type SectionAboutProps = {
   image: ImageProps
 }
 
+export type SectionTechProps = {
+  title: string
+  techs: Array<{
+    label: string
+    icon: ImageProps
+  }>
+}
+
 export type LandingPageProps = {
   sectionHeader: SectionHeaderProps
   sectionAbout: SectionAboutProps
+  sectionTech: SectionTechProps
 }

@@ -16,14 +16,17 @@ import { GetStaticProps } from 'next'
 import client from 'graphql/client'
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 
-const Index = ({ sectionHeader, sectionHero, sectionAbout }) => {
+const Index = ({
+    sectionHeader, sectionHero, sectionAbout,
+    sectionTech
+  }) => {
   const hero = {...sectionHeader, sectionHero }
 
   return (
     <>
       <SectionHero {...hero }/>
       <SectionAboutProject {...sectionAbout} />
-      <SectionTech />
+      <SectionTech {...sectionTech} />
       <SectionConcepts />
       <SectionModules />
       <SectionAgenda />
