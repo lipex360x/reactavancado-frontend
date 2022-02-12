@@ -81,7 +81,7 @@ fragment sectionAgenda on LandingPage {
 }
 
 fragment princingBox on LandingPage {
-  princingBox {
+  pricingBox: princingBox {
     totalPrice
     numberInstallments
     priceInstallment
