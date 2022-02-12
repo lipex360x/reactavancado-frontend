@@ -17,24 +17,23 @@ import client from 'graphql/client'
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 
 const Index = ({ sectionHeader, sectionHero }) => {
-  console.log(sectionHero)
   const hero = {...sectionHeader, sectionHero }
 
   return (
-  <>
-    <SectionHero {...hero }/>
-    <SectionAboutProject />
-    <SectionTech />
-    <SectionConcepts />
-    <SectionModules />
-    <SectionAgenda />
-    <PricingBox />
-    <SectionAboutUs />
-    <SectionReviews />
-    <SectionFaq />
-    <Footer />
-    <JsonSchema />
-  </>
+    <>
+      <SectionHero {...hero }/>
+      <SectionAboutProject />
+      <SectionTech />
+      <SectionConcepts />
+      <SectionModules />
+      <SectionAgenda />
+      <PricingBox />
+      <SectionAboutUs />
+      <SectionReviews />
+      <SectionFaq />
+      <Footer />
+      <JsonSchema />
+    </>
   )
 }
 

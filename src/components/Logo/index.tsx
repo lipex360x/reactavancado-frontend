@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { ImageProps, SectionHeaderProps } from 'types/api'
+import { ImageProps } from 'types/api'
+import { getImageUrl } from 'utils/utils'
 import * as S from './styles'
 
-const Logo = ({ url, alternativeText }: ImageProps) => <S.LogoWrapper src={ url } alt={ alternativeText } />
+const Logo = ({ url, alternativeText }: ImageProps) => <S.LogoWrapper src={ getImageUrl(url) } alt={ alternativeText } />
 
 
 export default Logo

@@ -7,6 +7,7 @@ import * as S from './styles'
 import { gaEvent } from 'utils/ga'
 import Container from 'components/Container'
 import { SectionHeaderProps } from 'types/api'
+import { getImageUrl } from 'utils/utils'
 
 const onClick = () =>
   gaEvent({ action: 'click', category: 'cta', label: 'hero button' })
@@ -20,22 +21,22 @@ const SectionHero = ({ logo, sectionHero }: SectionHeaderProps) => (
         <S.TextBlock>
           <S.Title>{sectionHero.title}</S.Title>
           <S.Description>
-            Crie aplicações reais com NextJS, Strapi, GraphQL e mais!
+            {sectionHero.description}
           </S.Description>
           <S.ButtonWrapper>
             <Button
-              href="https://www.udemy.com/course/react-avancado/?couponCode=PROMOFEV22"
+              href={sectionHero.button.url}
               onClick={onClick}
               wide
             >
-              Comprar
+              {sectionHero.button.label}
             </Button>
           </S.ButtonWrapper>
         </S.TextBlock>
 
         <S.Image
-          src="/img/hero-illustration.svg"
-          alt="Ilustração de um desenvolvedor em frente a um computador com várias linhas de código."
+          src={getImageUrl(sectionHero.hero.url)}
+          alt={sectionHero.hero.alternativeText}
         />
       </S.Content>
     </Container>
