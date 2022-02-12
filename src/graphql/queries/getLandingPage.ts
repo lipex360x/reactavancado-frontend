@@ -61,6 +61,17 @@ fragment sectionConcepts on LandingPage {
   }
 }
 
+fragment sectionModules on LandingPage {
+  sectionModules {
+    title
+    modules {
+      title
+      subtitle
+      description
+    }
+  }
+}
+
 fragment sectionAgenda on LandingPage {
   sectionAgenda {
     title
@@ -131,6 +142,7 @@ query GET_HOMEPAGE {
     ...sectionAbout
     ...sectionTech
     ...sectionConcepts
+    ...sectionModules
     ...sectionAgenda
     ...princingBox
     ...sectionAboutUs
