@@ -20,7 +20,7 @@ const Index = ({
     sectionHeader, sectionHero, sectionAbout,
     sectionTech, sectionConcepts, sectionModules,
     sectionAgenda, pricingBox, sectionAboutUs,
-    sectionReviews
+    sectionReviews, sectionFaq
   }) => {
   const hero = {...sectionHeader, sectionHero }
 
@@ -35,7 +35,7 @@ const Index = ({
       <PricingBox {...pricingBox}/>
       <SectionAboutUs {...sectionAboutUs} />
       <SectionReviews {...sectionReviews} />
-      <SectionFaq />
+      <SectionFaq {...sectionFaq} />
       <Footer />
       <JsonSchema />
     </>
