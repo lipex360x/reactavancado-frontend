@@ -20,6 +20,13 @@ export type SectionHeaderProps = {
   sectionHero: SectionHeroProps
 }
 
+export type SectionAboutProps = {
+  title: string
+  description: string
+  image: ImageProps
+}
+
 export type LandingPageProps = {
   sectionHeader: SectionHeaderProps
+  sectionAbout: SectionAboutProps
 }
