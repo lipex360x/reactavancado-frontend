@@ -66,6 +66,20 @@ export type PricingBoxProps = {
   button: ButtonProps
 }
 
+export type SectionAboutUsProps = {
+  title: string
+  authors: Array<{
+    photo: ImageProps
+    name: string
+    role: string
+    description: string
+    socialMedia: Array<{
+      url: string
+      title: string
+    }>
+  }>
+}
+
 export type LandingPageProps = {
   sectionHeader: SectionHeaderProps
   sectionAbout: SectionAboutProps
@@ -74,4 +88,5 @@ export type LandingPageProps = {
   sectionModules: SectionModulesProps
   sectionAgenda: SectionAgendaProps
   pricingBox: PricingBoxProps
+  sectionAboutUs: SectionAboutUsProps
 }

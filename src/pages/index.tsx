@@ -19,11 +19,9 @@ import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 const Index = ({
     sectionHeader, sectionHero, sectionAbout,
     sectionTech, sectionConcepts, sectionModules,
-    sectionAgenda, pricingBox
+    sectionAgenda, pricingBox, sectionAboutUs
   }) => {
   const hero = {...sectionHeader, sectionHero }
-
-  console.log(pricingBox)
 
   return (
     <>
@@ -34,7 +32,7 @@ const Index = ({
       <SectionModules {...sectionModules} />
       <SectionAgenda {...sectionAgenda} />
       <PricingBox {...pricingBox}/>
-      <SectionAboutUs />
+      <SectionAboutUs {...sectionAboutUs} />
       <SectionReviews />
       <SectionFaq />
       <Footer />
