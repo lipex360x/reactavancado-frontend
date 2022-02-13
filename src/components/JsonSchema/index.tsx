@@ -1,14 +1,8 @@
 import React from 'react'
-import { CourseJsonLd, ProductJsonLd } from 'next-seo'
+import { ProductJsonLd } from 'next-seo'
 
 const JsonSchema = () => (
   <>
-    <CourseJsonLd
-      courseName="React Avançado"
-      providerName="Willian Justen Cursos"
-      providerUrl="https://reactavancado.com.br/"
-      description="Aprenda a criar um Ecommerce completo, indo do Backend ao Frontend utilizando tecnologias como ReactJS, NextJS, Strapi, GraphQL, Apollo e muito mais!"
-    />
     <ProductJsonLd
       productName="Curso React Avançado"
       images={['https://reactavancado.com.br/img/cover.png']}
